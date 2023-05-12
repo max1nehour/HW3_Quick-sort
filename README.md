@@ -1,6 +1,5 @@
 ## HW3_Quick sort
 
-# 讀取txt檔 並運用hash計算有幾種不同的單字和其出現次數
 
 ## 程式碼與執行結果
 * [程式碼github網址<hw2_hash_practice.ipynb>](https://github.com/max1nehour/HW2_hash_practice/blob/main/HW2_hash_practice.ipynb)
