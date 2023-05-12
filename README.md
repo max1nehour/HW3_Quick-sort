@@ -20,7 +20,7 @@ def quick_sort(arr):
         greater = [x for x in arr[1:] if x > pivot] # 大於基準點的元素
 ```    
 
-# 顯示排序過程
+* 顯示排序過程
 ```py
         print("pivot: ", pivot)
         print("less: ", less)
