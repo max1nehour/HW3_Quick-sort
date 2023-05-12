@@ -1,4 +1,4 @@
-#### HW3_Quick sort
+## HW3_Quick sort
 
 # 讀取txt檔 並運用hash計算有幾種不同的單字和其出現次數
 
@@ -7,52 +7,26 @@
 
 ## 程式碼解析：
 
- * 用while迴圈確保輸入的數字在0~255之間。
-
-* 載入json模組
-* 讀取txt檔
-* 初始化一個空字典
 ```py
-import json
-with open('/content/hw2_data.txt', 'r') as data:
-string_counts = {}
+def quick_sort(arr):
+    if len(arr) <= 1:11
+        return arr # 如果列表中只有一個元素或沒有元素，直接返回該列表
+    else:
+        pivot = arr[0] # 設定基準點為列表第一個元素
+        less = [x for x in arr[1:] if x <= pivot] # 小於等於基準點的元素
+        greater = [x for x in arr[1:] if x > pivot] # 大於基準點的元素
+        
+        
+        # 在排序過程中顯示過程
+        print("pivot: ", pivot)
+        print("less: ", less)
+        print("greater: ", greater)
+        return quick_sort(less) + [pivot] + quick_sort(greater) # 進行遞迴排序，直到所有元素都排序完成
+
+# 測試程式碼
+arr = [33, 67, 8, 13, 54, 119, 3, 84, 25, 41]
+print("Original array: ", arr)
+sorted_arr = quick_sort(arr)
+print("Sorted array: ", sorted_arr)
 ```
 
-* 一行一行讀取，分割每一行變成單個文字
-* stripe(): 去除首尾空格
-* split(): 括號內為空格，代表以「一個空格」為分隔符
-```py
-    for line in data:
-        words = line.strip().split()
-```
-* 一個單字一個單字讀取
-* 如果單字不存在，將其加入字典中，令值=1
-* 逐行列印單字和其出現次數，方便debug
-```py
-        for string in words:
-            if string not in string_counts:  
-                string_counts[string] = 1
-                print(words, string_counts[string])  
-```
-
-* 如果單字已存在，將其在字典中的值加1
-* 列印單字和其出現次數
-```py    
-            else:
-                string_counts[string] += 1
-                print(words, string_counts[string]) 
-```
-
-* 列印有多少字典的key和其對應value，利用json模組增加可讀性
-* 列印有多少元素在字典中
-```py                     
-print("每一個單字出現次數：",json.dumps(string_counts, sort_keys=False, indent=4),"\n")
-print("有幾種單字出現：",len(string_counts),"種")
-
-```
-
-* 記得關閉檔案
-
-```py
-data.close()
-```
