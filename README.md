@@ -2,7 +2,7 @@
 
 
 ## 程式碼與執行結果
-* [程式碼github網址<hw2_quick_sort.ipynb>](https://github.com/max1nehour/HW2_hash_practice/blob/main/HW2_hash_practice.ipynb)
+* [程式碼github網址<hw2_quick_sort.ipynb>](HW3.ipynb)
 
 ## 程式碼解析：
 
