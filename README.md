@@ -8,7 +8,7 @@
 
 ```py
 def quick_sort(arr):
-    if len(arr) <= 1:11
+    if len(arr) <= 1:
         return arr # 如果列表中只有一個元素或沒有元素，直接返回該列表
 ```
 * 串列生成式：結合迴圈與條件測試式，以減少繁瑣的語法
