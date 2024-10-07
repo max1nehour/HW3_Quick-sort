@@ -1,4 +1,4 @@
-## HW3_Quick sort
+## Quick sort
 
 
 ## 程式碼與執行結果
